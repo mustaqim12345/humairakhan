@@ -17,9 +17,9 @@ pipeline {
     stage('Docker Run') {
       steps {
        sh '''
-         docker rm -f java-app-container || true
-         docker run -d --name java-app-container -p 8081:8080 java-app:latest
-        '''
+       docker rm -f java-app-container || true
+       docker run -d --name java-app-container -p 8081:8080 java-app:latest
+       '''
   }
 }
 
